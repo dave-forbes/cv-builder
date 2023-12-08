@@ -1,11 +1,20 @@
+import { useState } from "react";
+
 import Title from "./Title";
 import FormContainer from "./FormContainer";
 
 export default function Forms() {
+  const [isOpened, setIsOpened] = useState(0);
+
+  function handleClick(num) {
+    num !== isOpened ? setIsOpened(num) : setIsOpened(3);
+  }
   return (
     <div className="forms">
       <Title />
       <FormContainer
+        onClick={() => handleClick(0)}
+        isOpened={isOpened === 0}
         title="General Info"
         className="general-info"
         elements={
@@ -26,6 +35,8 @@ export default function Forms() {
         }
       />
       <FormContainer
+        onClick={() => handleClick(1)}
+        isOpened={isOpened === 1}
         title="Education"
         className="education"
         elements={
@@ -43,6 +54,8 @@ export default function Forms() {
         }
       />
       <FormContainer
+        onClick={() => handleClick(2)}
+        isOpened={isOpened === 2}
         title="Employment"
         className="employment"
         elements={

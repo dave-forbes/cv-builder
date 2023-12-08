@@ -1,18 +1,16 @@
-import { useState } from "react";
-
-// eslint-disable-next-line react/prop-types
-export default function FormContainer({ className, title, elements }) {
-  const [isOpened, setIsOpened] = useState(true);
-
-  function handleClick() {
-    setIsOpened(isOpened ? false : true);
-  }
-
+/* eslint-disable react/prop-types */
+export default function FormContainer({
+  className,
+  title,
+  elements,
+  onClick,
+  isOpened,
+}) {
   return (
     <div className={className}>
       <div className="title-container">
         <h2>{title}</h2>
-        <svg onClick={handleClick} viewBox="0 0 330 330">
+        <svg onClick={onClick} viewBox="0 0 330 330">
           <g id="SVGRepo_iconCarrier">
             {" "}
             <path
@@ -22,7 +20,7 @@ export default function FormContainer({ className, title, elements }) {
           </g>
         </svg>
       </div>
-      <form noValidate className={isOpened ? "hide" : undefined}>
+      <form noValidate className={isOpened ? undefined : "hide"}>
         {elements}
         <div className="buttons">
           <button>Save</button>
