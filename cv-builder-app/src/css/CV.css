@@ -12,12 +12,13 @@
 
 .C-V section {
   max-width: 800px;
-  margin: 20px auto;
+  margin: 0 auto;
   padding: 20px;
 }
 
 .C-V h1 {
   font-size: 2em;
+  padding-bottom: 1rem;
 }
 
 .C-V h2 {
