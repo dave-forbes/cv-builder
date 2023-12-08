@@ -1,21 +1,15 @@
 /* eslint-disable react/prop-types */
 import "../css/CV.css";
 
-export default function CV({ name }) {
+export default function CV({ cV }) {
   return (
     <div className="C-V">
       <header>
-        <h1>{name}</h1>
-        <p>Curriculum Vitae</p>
+        <h1>{cV.name}</h1>
+        <p>{cV.email}</p>
+        <p>{cV.address}</p>
+        <p>{cV.phone}</p>
       </header>
-
-      <section>
-        <h2>Contact Information</h2>
-        <p>Email: your.email@example.com</p>
-        <p>Phone: (123) 456-7890</p>
-        <p>LinkedIn: linkedin.com/in/yourname</p>
-      </section>
-
       <section>
         <h2>Education</h2>
         <h3>Degree in Something Awesome</h3>
