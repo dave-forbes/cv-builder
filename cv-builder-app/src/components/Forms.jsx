@@ -1,9 +1,10 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 
 import Title from "./Title";
 import FormContainer from "./FormContainer";
 
-export default function Forms() {
+export default function Forms({ changeName }) {
   const [isOpened, setIsOpened] = useState(0);
 
   function handleClick(num) {
@@ -20,7 +21,7 @@ export default function Forms() {
         elements={
           <>
             <label className="full-name" htmlFor="full-name">
-              Full Name <input id="full-name" />
+              Full Name <input onChange={changeName} id="full-name" />
             </label>
             <label className="email" htmlFor="email">
               Email <input id="email" />
