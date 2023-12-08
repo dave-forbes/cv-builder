@@ -1,9 +1,18 @@
-export default function Education() {
+import { useState } from "react";
+
+// eslint-disable-next-line react/prop-types
+export default function FormContainer({ className, title, elements }) {
+  const [isOpened, setIsOpened] = useState(true);
+
+  function handleClick() {
+    setIsOpened(isOpened ? false : true);
+  }
+
   return (
-    <div className="education">
+    <div className={className}>
       <div className="title-container">
-        <h2>Education</h2>
-        <svg viewBox="0 0 330 330">
+        <h2>{title}</h2>
+        <svg onClick={handleClick} viewBox="0 0 330 330">
           <g id="SVGRepo_iconCarrier">
             {" "}
             <path
@@ -13,16 +22,8 @@ export default function Education() {
           </g>
         </svg>
       </div>
-      <form className="hide">
-        <label className="school-name" htmlFor="school-name">
-          School name <input id="school-name" />
-        </label>
-        <label className="title-of-study" htmlFor="title-of-study">
-          Title of study <input id="title-of-study" />
-        </label>
-        <label className="date-of-study" htmlFor="date-of-study">
-          Date of study <input id="date-of-study" />
-        </label>
+      <form noValidate className={isOpened ? "hide" : undefined}>
+        {elements}
         <div className="buttons">
           <button>Save</button>
           <button>Cancel</button>
