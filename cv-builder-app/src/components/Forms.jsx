@@ -4,12 +4,7 @@ import { useState } from "react";
 import Title from "./Title";
 import FormContainer from "./FormContainer";
 
-export default function Forms({
-  changeName,
-  changeEmail,
-  changeAddress,
-  changePhone,
-}) {
+export default function Forms({ handleChange }) {
   const [isOpened, setIsOpened] = useState(0);
 
   function handleClick(num) {
@@ -26,16 +21,32 @@ export default function Forms({
         elements={
           <>
             <label className="full-name" htmlFor="full-name">
-              Full Name <input onChange={changeName} id="full-name" />
+              Full Name{" "}
+              <input
+                onChange={(e) => handleChange("name", e.target.value)}
+                id="full-name"
+              />
             </label>
             <label className="email" htmlFor="email">
-              Email <input onChange={changeEmail} id="email" />
+              Email{" "}
+              <input
+                onChange={(e) => handleChange("email", e.target.value)}
+                id="email"
+              />
             </label>
             <label className="address" htmlFor="address">
-              Address <input onChange={changeAddress} id="address" />
+              Address{" "}
+              <input
+                onChange={(e) => handleChange("address", e.target.value)}
+                id="address"
+              />
             </label>
             <label className="phone" htmlFor="phone">
-              Phone <input onChange={changePhone} id="phone" />
+              Phone{" "}
+              <input
+                onChange={(e) => handleChange("phone", e.target.value)}
+                id="phone"
+              />
             </label>
           </>
         }
