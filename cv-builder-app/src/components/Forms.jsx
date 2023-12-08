@@ -1,5 +1,5 @@
 import Title from "./Title";
-import GeneralInfo from "../GeneralInfo";
+import GeneralInfo from "./GeneralInfo";
 import Education from "./Education";
 import Employment from "./Employment";
 
