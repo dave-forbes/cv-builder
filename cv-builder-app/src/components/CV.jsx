@@ -12,22 +12,37 @@ export default function CV({ cV }) {
       </header>
       <section>
         <h2>Education</h2>
-        <h3>Degree in Something Awesome</h3>
-        <p>University Name, Graduation Year</p>
-      </section>
-
-      <section>
-        <h2>Work Experience</h2>
-        <h3>Job Title</h3>
-        <p>Company Name, Start Date - End Date</p>
+        <h3>{cV.education1Title}</h3>
         <p>
-          Description of your responsibilities and achievements in this role.
+          {cV.education1Name}, {cV.education1Dates}
+        </p>
+        <h3>{cV.education2Title}</h3>
+        <p>
+          {cV.education2Name}, {cV.education2Dates}
         </p>
       </section>
 
       <section>
+        <h2>Emploment</h2>
+        <h3>{cV.employment1Title}</h3>
+        <p>
+          {cV.employment1Name}, {cV.employment1StartDate} -{" "}
+          {cV.employment1EndDate}
+        </p>
+        <p>{cV.employment1Responsibilities}</p>
+        <h3>{cV.employment2Title}</h3>
+        <p>
+          {cV.employment2Name}, {cV.employment2StartDate} -{" "}
+          {cV.employment2EndDate}
+        </p>
+        <p>{cV.employment2Responsibilities}</p>
+      </section>
+
+      <section>
         <h2>Skills</h2>
-        <p>HTML, CSS, JavaScript, React, etc.</p>
+        <p>
+          {cV.skill1}, {cV.skill2}, {cV.skill3}, {cV.skill4}, {cV.skill5}
+        </p>
       </section>
     </div>
   );
