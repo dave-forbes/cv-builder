@@ -33,7 +33,7 @@ svg {
   border-radius: 5px;
 }
 
-.title, .general-info, .education, .employment, .C-V {
+.title, .general-info, .education, .employment, .skills, .C-V {
   padding: 1rem;
   background-color: white;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -52,7 +52,7 @@ div.title-container {
   justify-content: space-between;
 }
 
-form {
+.form {
   display: grid;
   padding: 1rem;
   gap: 1rem;

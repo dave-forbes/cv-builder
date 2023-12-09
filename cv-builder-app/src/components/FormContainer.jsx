@@ -20,13 +20,7 @@ export default function FormContainer({
           </g>
         </svg>
       </div>
-      <form noValidate className={isOpened ? undefined : "hide"}>
-        {elements}
-        <div className="buttons">
-          <button>Save</button>
-          <button>Cancel</button>
-        </div>
-      </form>
+      <div className={isOpened ? "form" : "form hide"}>{elements}</div>
     </div>
   );
 }
