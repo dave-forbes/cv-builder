@@ -1,0 +1,38 @@
+.C-V header, .C-V section, .C-V h1, .C-V h2, .C-V h3, .C-V p {
+  margin: 0;
+  padding: 0;
+}
+
+.C-V header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.C-V section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0.2rem 1rem;
+}
+
+.C-V h1 {
+  font-size: 2em;
+  padding-bottom: 1rem;
+}
+
+.C-V h2 {
+  color: #333;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+  margin-top: 20px;
+}
+
+.C-V h3 {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+.C-V p {
+  margin-bottom: 10px;
+}
